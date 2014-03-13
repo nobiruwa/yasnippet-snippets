@@ -1,0 +1,69 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ant
+# key: ant
+# --
+<?xml version="1.0"?>
+<project default="projecthelp">
+  <property name="lib.name" value="$1" />
+  <property name="lib.dir" value="target" />
+  <property name="src.main.dir" value="src/main/java" />
+  <property name="src.test.dir" value="src/test/java" />
+  <property name="classes.main.dir" value="target/classes" />
+  <property name="classes.test.dir" value="target/test-classes" />
+  <property name="reports.test.dir" value="target/reports-test" />
+  <property name="junit.path" value="/usr/share/java/junit4.jar" />
+  <target name="projecthelp">
+    <java classname="org.apache.tools.ant.Main">
+      <arg value="-projecthelp" />
+      <arg value="-buildfile" />
+      <arg value="\${ant.file}" />
+    </java>
+  </target>
+  <target name="init">
+    <mkdir dir="\${src.main.dir}" />
+    <mkdir dir="\${src.test.dir}" />
+  </target>
+  <target name="compile">
+    <mkdir dir="\${classes.main.dir}"/>
+    <javac srcdir="\${src.main.dir}" destdir="\${classes.main.dir}" includeantruntime="true"/>
+  </target>
+  <target name="build" depends="compile">
+    <mkdir dir="\${lib.dir}" />
+    <jar jarfile="\${lib.dir}/\${lib.name}.jar" basedir="\${classes.main.dir}">
+      <fileset dir="\${classes.main.dir}">
+      </fileset>
+    </jar>
+  </target>
+  <target name="test-compile" depends="compile">
+    <mkdir dir="\${classes.test.dir}"/>
+    <javac srcdir="\${src.test.dir}" destdir="\${classes.test.dir}" includeantruntime="true">
+    <classpath>
+      <pathelement location="\${src.main.dir}" />
+      <pathelement path="\${classes.main.dir}" />
+      <pathelement path="\${junit.path}" />
+    </classpath>
+    </javac>
+  </target>
+  <target name="test" depends="test-compile">
+    <mkdir dir="\${reports.test.dir}"/>
+    <junit>
+      <classpath>
+        <pathelement path="\${classes.main.dir}" />
+        <pathelement path="\${classes.test.dir}" />
+        <pathelement path="\${junit.path}" />
+      </classpath>
+      <formatter type="plain" />
+      <batchtest fork="yes" todir="\${reports.test.dir}">
+        <fileset dir="\${src.test.dir}">
+          <include name="**/*Test*.java" />
+        </fileset>
+      </batchtest>
+    </junit>
+  </target>
+  <target name="clean">
+    <delete dir="\${classes.main.dir}"/>
+    <delete dir="\${classes.test.dir}"/>
+    <delete dir="\${reports.test.dir}"/>
+    <delete dir="\${lib.dir}/\${lib.name}.jar"/>
+  </target>
+</project>
