@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: gs
+# key: gs
+# please define the following function in .emacs.d/init.el
+#(defun downcase-initial (obj)
+#       "It downcases the first letter of obj"
+#      (if (and (boundp 'obj) (stringp obj) (< 0 (length obj)))
+#        (concat (downcase (substring obj 0 1)) (substring obj 1))
+#        ""))
+# --
+public void set$1($2 ${1:$(downcase-initial text)}) {
+        this.${1:$(downcase-initial text)} = ${1:$(downcase-initial text)};
+}
+
+public $2 get$1() {
+        return this.${1:$(downcase-initial text)};
+}
