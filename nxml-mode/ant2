@@ -1,6 +1,6 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: ant
-# key: ant
+# name: ant2
+# key: ant2
 # --
 $0<?xml version="1.0"?>
 <project default="projecthelp">
@@ -11,8 +11,8 @@ $0<?xml version="1.0"?>
   <property name="classes.main.dir" value="target/classes" />
   <property name="classes.test.dir" value="target/test-classes" />
   <property name="reports.test.dir" value="target/reports-test" />
-  <property name="junit.path" value="/usr/share/java/junit4.jar" />
-  <property name="hamcrest.path" value="/usr/share/java/hamcrest-core.jar" />
+  <property name="junit.path" value="${2:lib/junit-4.11.jar}" />
+  <property name="hamcrest.path" value="${3:lib/hamcrest-core-1.3.jar}" />
   <target name="projecthelp">
     <java classname="org.apache.tools.ant.Main">
       <arg value="-projecthelp" />
