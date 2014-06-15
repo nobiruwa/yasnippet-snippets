@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: js
+# key: js
+# --
+<script type="text/javascript">
+$0
+</script>
