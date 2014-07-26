@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mocha.before
+# key: be
+# --
+before(function() {
+$0
+});

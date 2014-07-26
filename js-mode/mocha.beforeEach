@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mocha.beforeEach
+# key: bee
+# --
+beforeEach(function() {
+$0
+});

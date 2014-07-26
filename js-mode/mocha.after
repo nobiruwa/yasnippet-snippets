@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mocha.after
+# key: af
+# --
+after(function() {
+$0
+});
