@@ -2,6 +2,6 @@
 # name: mocha.before
 # key: be
 # --
-before(function() {
+before(function($1) {
 $0
 });
