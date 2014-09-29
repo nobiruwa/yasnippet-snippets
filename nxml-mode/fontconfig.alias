@@ -1,0 +1,22 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: fontconfig.alias
+# key: fontconfig.alias
+# --
+<alias>
+  <family>serif</family>
+  <prefer>
+    <family>$0</family>
+  </prefer>
+</alias>
+<alias>
+  <family>sans-serif</family>
+  <prefer>
+    <family></family>
+  </prefer>
+</alias>
+<alias>
+  <family>monospace</family>
+  <prefer>
+    <family></family>
+  </prefer>
+</alias>
