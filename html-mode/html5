@@ -7,8 +7,6 @@
 <head>
 <meta charset="${2:UTF-8}">
 <title>$3</title>
-<link rel="stylesheet" href="" type="text/css" media="screen" />
-<script type="text/javascript" src=""></script>
 </head>
 <body>
 $0
