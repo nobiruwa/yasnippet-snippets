@@ -2,6 +2,6 @@
 # name: js
 # key: js
 # --
-<script type="text/javascript">
+<script>
 $0
 </script>
