@@ -2,13 +2,13 @@
 # name: logger
 # key: logger
 # --
-from logging import NullHandler, Formatter, getLogger, DEBUG
-
-handler = NullHandler() # You can use FileHandler, StreamHandler etc.
-handler.setLevel(DEBUG)
+from logging import ${1:Null}Handler, Formatter, getLogger, ${2:DEBUG}
+${3:import sys}
+handler = $1Handler($4) # You can use FileHandler, StreamHandler etc.
+handler.setLevel($2)
 # webapp2 style
 formatter = Formatter('%(levelname)-8s %(asctime)s %(filename)s:%(lineno)s] %(message)s')
 handler.setFormatter(formatter)
 logger = getLogger(__name__)
-logger.setLevel(DEBUG)
+logger.setLevel($2)
 logger.addHandler(handler)

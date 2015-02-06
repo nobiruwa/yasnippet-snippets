@@ -1,0 +1,29 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: logger-gen
+# key: logger-gen
+# --
+from logging import NullHandler, Formatter, getLogger, DEBUG
+
+class LoggerFactory(object):
+    __logger = {}
+    def create(name, level=DEBUG, handler=None):
+        if name in self.__logger:
+            logger = self.__logger[name]
+        else:
+            logger = getLogger(name)
+            self.__logger[name] = logger
+
+        if handler is None:
+            handler = NullHandler()
+
+        handler.setLevel(level)
+        formatter = Formatter('%(levelname)-8s %(asctime)s %(filename)s:%(lineno)s] %(message)s')
+        handler.setFormatter(formatter)
+        logger.setLevel(level)
+        logger.removeHandler(handler)
+        logger.addHandler(handler)
+        return logger
+
+__factory = LoggerFactory()
+def create(level=DEBUG, handler=None):
+    return __factory.create(level, handler)
