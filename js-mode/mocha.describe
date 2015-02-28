@@ -2,6 +2,6 @@
 # name: mocha.describe
 # key: de
 # --
-describe("$1", function() {
+describe('$1', function() {
 $0
 });

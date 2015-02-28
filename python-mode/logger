@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: logger
+# key: logger
+# --
+from logging import NullHandler, Formatter, getLogger, DEBUG
+
+handler = NullHandler() # You can use FileHandler, StreamHandler etc.
+handler.setLevel(DEBUG)
+# webapp2 style
+handler.setFormatter(Formatter('%(levelname)-8s %(asctime)s %(filename)s:%(lineno)s] %(message)s'))
+logger = getLogger(__name__)
+logger.setLevel(DEBUG)
+logger.addHandler(handler)
