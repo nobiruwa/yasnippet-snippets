@@ -26,4 +26,5 @@ class LoggerFactory(object):
 
 __factory = LoggerFactory()
 def create(level=DEBUG, handler=None):
-    return __factory.create(level, handler)
+    name = __name__
+    return __factory.create(name, level, handler)
