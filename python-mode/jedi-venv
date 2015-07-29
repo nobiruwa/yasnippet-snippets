@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: jedi-venv
+# key: jedi-venv
+# --
+;; evaluate in buffer.
+(funcall (lambda ()
+           (let* ((jedi:server-command jedi:server-command)
+                  (jedi:server-args `("--virtual-env" ,(expand-file-name "$1")))
+                  (command (mapconcat 'identity (append jedi:server-command jedi:server-args) " ")))
+             (jedi:stop-server)
+             (jedi:start-server))))
