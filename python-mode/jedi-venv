@@ -3,7 +3,7 @@
 # key: jedi-venv
 # expand-env: ((yas-indent-line 'fixed))
 # --
-;; evaluate in buffer.
+;; evaluate in buffer.  # noqa
 (funcall
  (lambda ()
    (let* ((jedi:server-command jedi:server-command)
