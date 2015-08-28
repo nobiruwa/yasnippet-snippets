@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: anon
+# key: anon
+# --
+function(${1:arg}) {
+         $0
+}
