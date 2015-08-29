@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: grunt.load
+# key: grunt.load
+# --
+grunt.loadNpmTasks('grunt-$1');

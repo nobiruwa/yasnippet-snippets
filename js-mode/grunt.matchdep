@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: grunt.matchdep
+# key: grunt.matchdep
+# --
+require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks); // you need matchdep

@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: grunt.reg
+# key: grunt.reg
+# --
+grunt.registerTask('$1', [$2]);
