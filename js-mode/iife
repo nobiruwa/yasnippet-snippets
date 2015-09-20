@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: iife
+# key: iife
+# IIFE (pronounced "iffy") stands for immediately-invoked function expression
+# --
+${3:/*global ${4:jQuery} */}
+(function(${1:$, window, document, }undefined) {
+$0
+})(${2:jQuery, window, document});
