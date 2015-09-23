@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: grunt.connect
+# key: grunt.connect
+# --
+connect: {
+  ${1:server}: {
+    options: {
+      port: 9000,
+      base: '.',
+      keepalive: false
+    }
+  }
+}$0

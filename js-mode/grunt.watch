@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: grunt.watch
+# key: grunt.watch
+# --
+watch: {
+  ${1:target}: {
+    files: [$2],
+    tasks: [$3],
+    options: {
+      ${4:livereload: true}
+    }
+  }
+}$0
