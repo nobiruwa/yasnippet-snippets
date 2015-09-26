@@ -21,14 +21,24 @@ class NonCacheStaticFileHandler(StaticFileHandler):
 
 application = Application([
     (r'/$', MainHandler),
-    (r'/static/(.*)$', NonCacheStaticFileHandler, {
+    (r'/(favicon.ico)', StaticFileHandler, {'path': ''}),
+    (r'/(.*)$', NonCacheStaticFileHandler, {
         'path': '.',
+        'default_filename': 'index.html'
     }),
 ])
 
-if __name__ == '__main__':
+
+def main():
     define('port', default=8888, help='port')
     parse_command_line()
     application.listen(options.port)
     loop = IOLoop.current()
-    loop.start()
+    try:
+        loop.start()
+    except KeyboardInterrupt:
+        loop.stop()
+        print('\nKeyboard interrupt received, Quit.')
+
+if __name__ == '__main__':
+    main()
