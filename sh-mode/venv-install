@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: venv-install
+# key: venv-install
+# --
+ENV_DIR=$HOME/${1:.venvs}/$2
+
+mkdir -p $ENV_DIR
+${3:pyvenv} $ENV_DIR
+
+. $ENV_DIR/bin/activate
+
+pip install --upgrade pip
+pip install --upgrade $4

@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: venv-source
+# key: venv-source
+# --
+ENV_DIR=$HOME/${1:.venvs}/$2
+
+. $ENV_DIR/bin/activate
+
+echo "Please use in the current shell context."
+echo "    usage: . source.sh"
