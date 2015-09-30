@@ -1,6 +1,7 @@
 # -*- mode: snippet; require-final-newline: nil -*-
 # name: tornado-hello
 # key: tornado-hello
+# expand-env: ((yas-indent-line 'fixed))
 # --
 from tornado.ioloop import IOLoop
 from tornado.options import define, options, parse_command_line
