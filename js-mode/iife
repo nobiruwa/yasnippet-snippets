@@ -3,7 +3,7 @@
 # key: iife
 # IIFE (pronounced "iffy") stands for immediately-invoked function expression
 # --
-${3:/*global ${4:jQuery} */}
+${3:/*global ${4:jQuery:false} */}
 (function(${1:$, window, document, }undefined) {
 $0
 })(${2:jQuery, window, document});
