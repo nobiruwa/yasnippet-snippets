@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: had
+# key: had
+# --
+{-| $0
+-}
