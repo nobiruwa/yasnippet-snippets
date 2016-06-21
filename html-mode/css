@@ -2,4 +2,4 @@
 # name: css
 # key: css
 # --
-<link rel="stylesheet" href="${1:url}">
+<link rel="stylesheet" href="$1">
