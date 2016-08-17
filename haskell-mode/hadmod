@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: hadmod
+# key: hadmod
+# --
+{-|
+Module      : $1
+Description : $2
+Copyright   : (c) ${3:`(user-full-name)`}, `(format-time-string "%Y")`
+License     : MIT
+Maintainer  : ${4:`(user-login-name)`}
+Stability   : experimental
+Portability : POSIX
+
+$0
+-}
