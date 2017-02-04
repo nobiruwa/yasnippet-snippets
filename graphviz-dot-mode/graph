@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# name: graph
+# key: graph
+# --
+${1:di}graph ${2:graph_id} {$0
+    // ID=ID;
+    // ex) rankdir=LR;
+
+    // attr_stmt
+    graph [];
+    node [];
+    edge [];
+
+    // subgraph
+    // ex) subgraph ID {...}
+
+    // node_stmt
+    // ex) node_id [...];
+
+    // edge_stmt
+    // ex) In digraph => node_id:port -> node_id:port [...];
+    // ex) In graph => node_id:port -- subraph_id:port [...];
+}
