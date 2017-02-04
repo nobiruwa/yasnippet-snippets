@@ -6,6 +6,7 @@
 <html lang="${1:ja}">
 <head>
 <meta charset="${2:UTF-8}">
+<meta name="viewport" value="width=device-width, initial-scale=1">
 <title>$3</title>
 </head>
 <body>
