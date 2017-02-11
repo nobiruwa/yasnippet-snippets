@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: mocha.describe2
+# key: de2
+# --
+describe("$1", function() {
+$0
+});
