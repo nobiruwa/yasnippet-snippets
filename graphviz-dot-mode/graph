@@ -19,5 +19,5 @@ ${1:di}graph ${2:graph_id} {$0
 
     // edge_stmt
     // ex) In digraph => node_id:port -> node_id:port [...];
-    // ex) In graph => node_id:port -- subraph_id:port [...];
+    // ex) In graph => node_id:port -- subgraph_id:port [...];
 }
