@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mod
+# key: mod
+# --
+module ${1:Module} exposing (${2:..})

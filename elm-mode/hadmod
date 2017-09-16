@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: hadmod
+# key: hadmod
+# --
+{-| $0
+
+${1:# ${2:heading}}
+${3:@docs ${4:ExposingModule}}
+-}
