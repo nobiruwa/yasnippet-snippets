@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: f
+# key: f
+# --
+FROM ${1:debian}:${2:sid}

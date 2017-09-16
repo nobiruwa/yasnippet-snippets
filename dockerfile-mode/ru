@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ru
+# key: ru
+# --
+RUN ["${1:executable}"${2:, "${3:arg1}"}]

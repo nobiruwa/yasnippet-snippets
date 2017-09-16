@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sh
+# key: sh
+# --
+SHELL ["${1:executable}"${2:, "${3:arg1}"}]

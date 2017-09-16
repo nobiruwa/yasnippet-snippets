@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: v
+# key: v
+# --
+VOLUME ["${1:/volume/path}"]

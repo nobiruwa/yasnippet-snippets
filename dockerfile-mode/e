@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: e
+# key: e
+# --
+ENV ${1:VAR} ${2:VALUE}
