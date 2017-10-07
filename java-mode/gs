@@ -8,10 +8,10 @@
 #        (concat (downcase (substring obj 0 1)) (substring obj 1))
 #        ""))
 # --
-public void set$1($2 ${1:$(downcase-initial text)}) {
-        this.${1:$(downcase-initial text)} = ${1:$(downcase-initial text)};
+public void set$1($2 ${1:$(downcase-initial yas-text)}) {
+        this.${1:$(downcase-initial yas-text)} = ${1:$(downcase-initial yas-text)};
 }
 
 public $2 get$1() {
-        return this.${1:$(downcase-initial text)};
+        return this.${1:$(downcase-initial yas-text)};
 }
