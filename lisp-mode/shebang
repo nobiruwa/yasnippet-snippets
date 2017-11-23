@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: shebang
+# key: shebang
+# --
+#!/usr/bin/sbcl --script
+(load (merge-pathnames "quicklisp/setup.lisp" (user-homedir-pathname)))
