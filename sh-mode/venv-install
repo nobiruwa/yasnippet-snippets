@@ -5,7 +5,7 @@
 ENV_DIR=$HOME/${1:.venvs}/$2
 
 mkdir -p $ENV_DIR
-${3:pyvenv} $ENV_DIR
+${3:virtualenv} $ENV_DIR
 
 . $ENV_DIR/bin/activate
 
