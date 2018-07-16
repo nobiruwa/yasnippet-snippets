@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: pom-dep
+# key: pom-dep
+# --
+<dependency>
+  <groupId>$1</groupId>
+  <artifactId>$2</artifactId>
+  <version>$3</version>${4:
+  <!-- type: jar, ejb-client, test-jar, etc. -->
+  <type>jar</type>
+  <!-- scope: compile, provided, runtime, test, system -->
+  <scope></scope>
+  <!-- systemPath: absolute path such as ${java.home}/lib -->
+  <systemPath></systemPath>
+  <!-- optional: true, false -->
+  <optional></optional>}
+</dependency>

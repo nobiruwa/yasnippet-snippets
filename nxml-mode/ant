@@ -4,8 +4,9 @@
 # --
 $0<?xml version="1.0"?>
 <project default="projecthelp">
-  <property name="lib.name" value="$1" />
-  <property name="lib.dir" value="target" />
+  <property name="project.name" value="$1" />
+  <property name="output.dir" value="target" />
+  <property name="lib.dir" value="lib" />
   <property name="src.main.dir" value="src/main/java" />
   <property name="src.test.dir" value="src/test/java" />
   <property name="classes.main.dir" value="target/classes" />
@@ -25,12 +26,15 @@ $0<?xml version="1.0"?>
     <mkdir dir="\${src.test.dir}" />
   </target>
   <target name="compile">
+    <classpath>
+      <pathelement location="\${lib.dir}" />
+    </classpath>
     <mkdir dir="\${classes.main.dir}"/>
     <javac srcdir="\${src.main.dir}" destdir="\${classes.main.dir}" includeantruntime="true"/>
   </target>
   <target name="build" depends="compile">
-    <mkdir dir="\${lib.dir}" />
-    <jar jarfile="\${lib.dir}/\${lib.name}.jar" basedir="\${classes.main.dir}">
+    <mkdir dir="\${output.dir}" />
+    <jar jarfile="\${output.dir}/\${project.name}.jar" basedir="\${classes.main.dir}">
       <fileset dir="\${classes.main.dir}">
       </fileset>
     </jar>
@@ -67,6 +71,6 @@ $0<?xml version="1.0"?>
     <delete dir="\${classes.main.dir}"/>
     <delete dir="\${classes.test.dir}"/>
     <delete dir="\${reports.test.dir}"/>
-    <delete dir="\${lib.dir}/\${lib.name}.jar"/>
+    <delete dir="\${output.dir}/\${project.name}.jar"/>
   </target>
 </project>
