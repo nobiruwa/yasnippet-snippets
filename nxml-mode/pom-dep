@@ -10,7 +10,7 @@
   <type>jar</type>
   <!-- scope: compile, provided, runtime, test, system -->
   <scope></scope>
-  <!-- systemPath: absolute path such as ${java.home}/lib -->
+  <!-- systemPath: absolute path such as \${java.home}/lib -->
   <systemPath></systemPath>
   <!-- optional: true, false -->
   <optional></optional>}
