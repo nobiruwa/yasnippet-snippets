@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: skelton
-# key: skelton
+# name: skeleton
+# key: skeleton
 # expand-env: ((yas-indent-line 'fixed))
 # --
 import Html exposing (..)
