@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: component
+# key: component
+# --
+<template>
+
+</template>
+
+<script>
+
+</script>
+
+<style scoped>
+
+</style>
