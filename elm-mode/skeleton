@@ -3,12 +3,16 @@
 # key: skeleton
 # expand-env: ((yas-indent-line 'fixed))
 # --
+module ${1:Main} exposing (..)$0
+
+import Browser exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
+main : Program ${2:()} Model Msg
 main =
-    Html.program
+    Browser.element
     { init = init
     , update = update
     , view = view
@@ -19,7 +23,8 @@ main =
 
 type alias Model = {}
 
-init = ({}, Cmd.none)
+init : $2 -> (Model, Cmd Msg)
+init flags = ({}, Cmd.none)
 
 -- UPDATE
 
