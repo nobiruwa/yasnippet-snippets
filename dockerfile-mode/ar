@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: ar
+# name: ARG
 # key: ar
 # --
 ARG ${1:name}${2:=${3:default value}}

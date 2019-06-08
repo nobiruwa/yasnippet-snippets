@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: s
+# name: STOPSIGNAL
 # key: s
 # --
 STOPSIGNAL ${1:9}

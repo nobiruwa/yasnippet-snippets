@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: o
+# name: ONBUILD
 # key: o
 # --
 ONBUILD ${1:INSTRUCTION ...}

@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: p
+# name: PORT
 # key: p
 # --
 PORT ${1:80}

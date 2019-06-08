@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: l
+# name: LABEL
 # key: l
 # --
 LABEL ${1:key}="${2:value}"

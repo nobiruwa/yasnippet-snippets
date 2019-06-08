@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: h
+# name: HEALTHCHECK
 # key: h
 # --
 HEALTHCHECK ${1:options} CMD $0

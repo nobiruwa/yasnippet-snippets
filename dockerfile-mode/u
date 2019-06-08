@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: u
+# name: USER
 # key: u
 # --
 USER ${1:user}${2::${3:group}}

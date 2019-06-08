@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: co
+# name: COPY
 # key: co
 # --
 COPY ${1:from} ${2:to}

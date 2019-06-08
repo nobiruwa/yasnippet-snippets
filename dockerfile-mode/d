@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: d
+# name: directive
 # key: d
 # --
 # ${1:directive}=${2:value}
