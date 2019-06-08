@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: example
 # key: example
+# expand-env: ((yas-indent-line 'fixed))
 # --
 $0# Firefox over VNC
 #
