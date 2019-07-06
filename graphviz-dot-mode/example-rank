@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: example-rank
+# key: example-rank
+# expand-env: ((yas/indent-line 'fixed))
+# --
+digraph R {
+
+  node [shape=box];
+
+  { rank=same rA sA tA }
+  { rank=same uB vB wB }
+
+   rA -> sA;
+   sA -> vB;
+   t  -> rA;
+   uB -> vB;
+   wB -> u;
+   wB -> tA;
+
+}

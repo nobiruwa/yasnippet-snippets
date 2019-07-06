@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: example-left-mid-right-aligned-text
+# key: example-left-mid-right-aligned-text
+# expand-env: ((yas/indent-line 'fixed))
+# --
+digraph L {
+
+  node [shape=record fontname=Arial];
+
+  a  [label="one\ltwo three\lfour five six seven\l"]
+  b  [label="one\ntwo three\nfour five six seven"]
+  c  [label="one\rtwo three\rfour five six seven\r"]
+
+  a -> b -> c
+
+}

@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: example-shape-record-vs-plaintext
+# key: example-shape-record-vs-plaintext
+# expand-env: ((yas/indent-line 'fixed))
+# --
+digraph D {
+
+    node [fontname="Arial"];
+
+    node_A [shape=record    label="shape=record|{above|middle|below}|right"];
+    node_B [shape=plaintext label="shape=plaintext|{curly|braces and|bars without}|effect"];
+
+}

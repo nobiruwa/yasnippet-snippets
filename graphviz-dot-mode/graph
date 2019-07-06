@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: graph
 # key: graph
+# expand-env: ((yas/indent-line 'fixed))
 # --
 ${1:di}graph ${2:graph_id} {$0
     // ID=ID;

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: example-multiple-edges
+# key: example-multiple-edges
+# expand-env: ((yas/indent-line 'fixed))
+# --
+digraph D {
+
+  A -> {B, C, D} -> {F}
+
+}
