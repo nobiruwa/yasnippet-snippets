@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: jdt-line-separator-prefs
+# condition: (message "use in .settings/org.eclipse.core.runtime.prefs.")
+# key: jdt-line-separator-prefs
+# --
+line.separator=\n
