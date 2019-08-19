@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: asd
+# key: asd
+# --
+(in-package :cl-user)
+(defpackage :${1:cl-$2}-asd
+  (:use :cl :asdf))
+(in-package :$1-asd)
+
+(defsystem :$1
+  :class :package-inferred-system
+  :description "$3"
+  :version "${4:0.1}"
+  :author "$5"
+  :license "${6:MIT License}"
+  :depends-on ("$1/$7"))
