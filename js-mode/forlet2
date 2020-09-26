@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: forlet2
+# key: forlet2
+# --
+for (let ${1:v} = 0; $1 < ${2:obj}; $1++) {
+$0}
