@@ -2,9 +2,8 @@
 # name: venv-source
 # key: venv-source
 # --
+# Please use in the current shell context.
+# usage: . source.sh"
 ENV_DIR=$HOME/${1:.venvs}/$2
 
 . $ENV_DIR/bin/activate
-
-echo "Please use in the current shell context."
-echo "    usage: . source.sh"

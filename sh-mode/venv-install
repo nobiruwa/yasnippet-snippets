@@ -1,13 +1,13 @@
 # -*- mode: snippet; require-final-newline: nil -*-
 # name: venv-install
 # key: venv-install
+# expand-env : ((yas/indent-line 'fixed))
 # --
 ENV_DIR=$HOME/${1:.venvs}/$2
 
 mkdir -p $ENV_DIR
 ${3:virtualenv} $ENV_DIR
 
-. $ENV_DIR/bin/activate
-
-pip install --upgrade pip wheel
+. $ENV_DIR/bin/activate && \
+pip install --upgrade pip wheel && \
 pip install --upgrade $4
