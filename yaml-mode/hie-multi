@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: hie-multi
+# key: hie-multi
+# expand-env: ((yas-indent-line 'fixed))
+# --
+# 何をターゲットとするかは以下のコマンドで確認する
+# $ stack ide targets
+# 参考:
+# https://github.com/haskell/haskell-language-server#project-configuration
+# https://github.com/mpickering/hie-bios/blob/master/README.md
+# 以下はhaskell-language-server自身のソースコードでの設定例
+cradle:
+  ${1:stack}:
+    - path: "./src"
+      component: "${2:project}:lib"
+    - path: "./app/Main.hs"
+      component: "$2:exe:$2-exe"
+    - path: "./test/Spec.hs"
+      component: "$2:test:$2-test"
