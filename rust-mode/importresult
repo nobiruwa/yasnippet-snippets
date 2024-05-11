@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: importresult
+# key: importresult
+# --
+use std::error::Error;
+use std::result::Result;

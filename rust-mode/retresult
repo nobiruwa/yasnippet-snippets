@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: retresult
+# key: retresult
+# --
+${1:std::result::}Result<${2:()}, Box<dyn ${3:std::error::}Error>>

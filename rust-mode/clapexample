@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: clapexample
+# key: clapexample
+# --
+use clap::{Parser, Subcommand};
+
+/// Simple program
+#[derive(Debug, Parser)]
+#[command(version, about, long_about = None)]
+pub struct Cli {
+    /// positional argument
+    pub positional: String,
+    /// argument
+    #[arg(short, long, default_value_t = String::from("default"))]
+    pub argument: String,
+    #[command(subcommand)]
+    pub command: Option<Commands>,
+}
+
+#[derive(Debug, Subcommand)]
+enum Commands {
+    /// does testing thins
+    Test {
+        /// lists test values
+        #[arg(short, long)]
+        list: bool,
+    },
+}
