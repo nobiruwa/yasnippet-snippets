@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: http-server
+# key: http-server
+# --
+/* global require:false */
+const http = require('http');
+
+const host = '0.0.0.0';
+const port = 3000;
+
+http.createServer(function (req, res) {
+    res.write('<html><head></head><body>Hi!</body></html>');
+    res.end();
+}).listen(port, host);
