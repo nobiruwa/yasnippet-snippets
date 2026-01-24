@@ -3,19 +3,23 @@
 # key: example
 # expand-env: ((yas-indent-line 'fixed))
 # --
-$0# Firefox over VNC
-#
-# VERSION               0.3
+FROM debian:sid
 
-FROM ubuntu
+# nginxをインストールする
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    nginx \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install vnc, xvfb in order to create a 'fake' display and firefox
-RUN apt-get update && apt-get install -y x11vnc xvfb firefox
-RUN mkdir ~/.vnc
-# Setup a password
-RUN x11vnc -storepasswd 1234 ~/.vnc/passwd
-# Autostart firefox (might not be the best way, but it does the trick)
-RUN bash -c 'echo "firefox" >> /.bashrc'
+# nginxのデフォルトドキュメントを差し替える
+RUN echo '<!doctype html><html><body><h1>Hello from Docker + nginx</h1></body></html>' \
+    > /var/www/html/index.html
 
-EXPOSE 5900
-CMD    ["x11vnc", "-forever", "-usepw", "-create"]
+# ポートを公開する
+EXPOSE 80
+
+# nginxを実行する
+ENTRYPOINT ["nginx"]
+
+# Dockerで動作させるためにフォアグラウンド実行する
+CMD ["-g", "daemon off;"]
