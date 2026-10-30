@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: uv-install
+# key: uv-install
+# --
+#!/usr/bin/env bash
+
+ENV_DIR=$HOME/.venvs/global
+
+if [ ! -d "\${ENV_DIR}" ]; then
+    uv venv "\${ENV_DIR}"
+fi
+
+uv pip install --python "\${ENV_DIR}" --upgrade $1
